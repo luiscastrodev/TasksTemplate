@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.1] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\646a95d76bad6ae96bffd95b4d3578d8\navigation-ui-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.3.1] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\50658ac21055444f05375f9651a2b632\navigation-ui-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\0aa09122d9eb272ea1237ac366fa31a3\material-1.2.1\AndroidManifest.xml:17:1-24:12
@@ -63,20 +63,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\e187fd287e6038095250409f52b2748d\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\3904b56a3e0d8fc171ad938abb797d6a\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\6aac124ec82aec9ea3808b769b722212\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:2:11-69
@@ -89,7 +89,7 @@ ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
 		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:8:5-27:19
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:8:5-28:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\0aa09122d9eb272ea1237ac366fa31a3\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\0aa09122d9eb272ea1237ac366fa31a3\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\87e40756e7d741acc6f0e67aea9f2842\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -117,37 +117,39 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\PC
 	android:allowBackup
 		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:9-40
+	android:usesCleartextTraffic
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:14:9-44
 activity#com.example.tasks.view.TaskFormActivity
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:9-68
-	android:name
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:19-56
-activity#com.example.tasks.view.RegisterActivity
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:9-59
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:9-58
 	android:name
 		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:19-56
+activity#com.example.tasks.view.RegisterActivity
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:9-59
+	android:name
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:19-56
 activity#com.example.tasks.view.LoginActivity
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:9-22:20
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:9-23:20
 	android:name
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:19-53
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:19-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:13-21:29
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:21:27-74
 activity#com.example.tasks.view.MainActivity
-ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:23:9-26:59
+ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:24:9-27:59
 	android:label
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:25:13-45
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:26:13-45
 	android:theme
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:26:13-56
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:27:13-56
 	android:name
-		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:24:13-46
+		ADDED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:25:13-46
 uses-sdk
 INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml

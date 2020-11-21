@@ -18,7 +18,7 @@
 12-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:6:22-64
 13
 14    <application
-14-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:8:5-27:19
+14-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:8:5-28:19
 15        android:allowBackup="true"
 15-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -33,56 +33,58 @@
 21        android:supportsRtl="true"
 21-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:13:9-35
 22        android:testOnly="true"
-23        android:theme="@style/AppTheme" >
-23-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:14:9-40
-24        <activity android:name="com.example.tasks.view.TaskFormActivity" />
-24-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:9-68
-24-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:19-56
-25        <activity android:name="com.example.tasks.view.RegisterActivity" />
-25-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:9-59
+23        android:theme="@style/AppTheme"
+23-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:15:9-40
+24        android:usesCleartextTraffic="true" >
+24-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:14:9-44
+25        <activity android:name="com.example.tasks.view.TaskFormActivity" />
+25-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:9-58
 25-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:16:19-56
-26        <activity android:name="com.example.tasks.view.LoginActivity" >
-26-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:9-22:20
-26-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:19-53
-27            <intent-filter>
-27-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:13-21:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:17-69
-28-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:17-77
-30-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity
-33-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:23:9-26:59
-34            android:name="com.example.tasks.view.MainActivity"
-34-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:24:13-46
-35            android:label="@string/app_name"
-35-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:25:13-45
-36            android:theme="@style/AppTheme.NoActionBar" />
-36-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:26:13-56
-37
-38        <service
-38-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
-39            android:name="androidx.room.MultiInstanceInvalidationService"
-39-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
-40            android:directBootAware="true"
-40-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
-41            android:exported="false" />
-41-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
-42
-43        <provider
-43-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-44            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-44-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-45            android:authorities="com.example.tasks.lifecycle-process"
-45-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-46            android:exported="false"
-46-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-47            android:multiprocess="true" />
-47-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-48    </application>
-49
-50</manifest>
+26        <activity android:name="com.example.tasks.view.RegisterActivity" />
+26-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:9-59
+26-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:17:19-56
+27        <activity android:name="com.example.tasks.view.LoginActivity" >
+27-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:9-23:20
+27-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:18:19-53
+28            <intent-filter>
+28-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:19:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:17-69
+29-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:20:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:21:17-77
+31-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:24:9-27:59
+35            android:name="com.example.tasks.view.MainActivity"
+35-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:25:13-46
+36            android:label="@string/app_name"
+36-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:26:13-45
+37            android:theme="@style/AppTheme.NoActionBar" />
+37-->D:\src\Projetos\TasksTemplate\app\src\main\AndroidManifest.xml:27:13-56
+38
+39        <service
+39-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+40            android:name="androidx.room.MultiInstanceInvalidationService"
+40-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+41            android:directBootAware="true"
+41-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+42            android:exported="false" />
+42-->[androidx.room:room-runtime:2.2.5] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\bf8ef9c99bacc97bb83557d2a67d4d8e\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+43
+44        <provider
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+45            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+45-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+46            android:authorities="com.example.tasks.lifecycle-process"
+46-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+47            android:exported="false"
+47-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+48            android:multiprocess="true" />
+48-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\PC-KLSOFT\.gradle\caches\transforms-2\files-2.1\595aa16c435e04bd295e3765e5d679aa\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+49    </application>
+50
+51</manifest>
