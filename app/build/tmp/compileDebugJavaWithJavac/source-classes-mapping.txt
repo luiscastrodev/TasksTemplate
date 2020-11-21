@@ -1,0 +1,2 @@
+com/example/tasks/BuildConfig.java
+ com.example.tasks.BuildConfig
