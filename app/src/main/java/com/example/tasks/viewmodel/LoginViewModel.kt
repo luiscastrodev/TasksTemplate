@@ -14,9 +14,13 @@ import com.example.tasks.service.repository.local.SecurityPreferences
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     private val mPersonRepository = PersonRepository(application)
-    private val mLogin = MutableLiveData<ValidationListener>()
     private val mSharedPreferences = SecurityPreferences(application)
+
+    private val mLogin = MutableLiveData<ValidationListener>()
     var login: LiveData<ValidationListener> = mLogin
+
+    private val mLoggedUser = MutableLiveData<Boolean>()
+    var loggedUser : LiveData<Boolean> = mLoggedUser
 
     /**
      * Faz login usando API
@@ -42,7 +46,12 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
      * Verifica se usuário está logado
      */
     fun verifyLoggedUser() {
+        val token = mSharedPreferences.get(TaskConstants.SHARED.TOKEN_KEY)
+        val personKey = mSharedPreferences.get(TaskConstants.SHARED.PERSON_KEY)
 
+        val logged = token != "" && personKey != ""
+
+        mLoggedUser.value = logged
     }
 
 }
