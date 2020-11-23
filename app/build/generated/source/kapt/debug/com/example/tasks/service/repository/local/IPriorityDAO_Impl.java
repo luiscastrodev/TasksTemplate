@@ -103,4 +103,26 @@ public final class IPriorityDAO_Impl implements IPriorityDAO {
       _statement.release();
     }
   }
+
+  @Override
+  public String getDescription(final int id) {
+    final String _sql = "SELECT description FROM priority WHERE id = ? ";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, id);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final String _result;
+      if(_cursor.moveToFirst()) {
+        _result = _cursor.getString(0);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
 }
