@@ -1,15 +1,13 @@
 package com.example.tasks.service.repository
 
 import android.content.Context
-import android.util.Log
 import com.example.tasks.R
-import com.example.tasks.service.HeaderModel
+import com.example.tasks.service.model.HeaderModel
 import com.example.tasks.service.constants.TaskConstants
 import com.example.tasks.service.listener.IAPIListener
 import com.example.tasks.service.repository.remote.IPersonService
 import com.example.tasks.service.repository.remote.RetrofitClient
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
