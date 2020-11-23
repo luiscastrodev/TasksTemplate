@@ -1,2 +1,9 @@
 com/example/tasks/BuildConfig.java
  com.example.tasks.BuildConfig
+com/example/tasks/service/repository/local/TaskDatabase_Impl.java
+ com.example.tasks.service.repository.local.TaskDatabase_Impl
+ com.example.tasks.service.repository.local.TaskDatabase_Impl$1
+com/example/tasks/service/repository/local/IPriorityDAO_Impl.java
+ com.example.tasks.service.repository.local.IPriorityDAO_Impl
+ com.example.tasks.service.repository.local.IPriorityDAO_Impl$1
+ com.example.tasks.service.repository.local.IPriorityDAO_Impl$2
