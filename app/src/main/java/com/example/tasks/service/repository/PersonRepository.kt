@@ -16,7 +16,7 @@ class PersonRepository(val context: Context) {
 
     private val mRemote = RetrofitClient.createService(IPersonService::class.java)
 
-    fun login(email: String, password: String, listener: IAPIListener) {
+    fun login(email: String, password: String, listener: IAPIListener<HeaderModel>) {
         val call: Call<HeaderModel> = mRemote.login(email, password)
         //async
         call.enqueue(object : Callback<HeaderModel> {
@@ -37,7 +37,7 @@ class PersonRepository(val context: Context) {
         })
     }
 
-    fun create(name: String, email: String, password: String, listener: IAPIListener) {
+    fun create(name: String, email: String, password: String, listener: IAPIListener<HeaderModel>) {
         val call: Call<HeaderModel> = mRemote.create(email, password, name)
         //async
         call.enqueue(object : Callback<HeaderModel> {

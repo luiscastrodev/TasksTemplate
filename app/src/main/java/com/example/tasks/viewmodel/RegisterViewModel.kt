@@ -20,7 +20,7 @@ class RegisterViewModel(application: Application) : AndroidViewModel(application
     var create: LiveData<ValidationListener> = mCreate
 
     fun create(name: String, email: String, password: String) {
-        mPersonRepository.create(name, email, password, object : IAPIListener {
+        mPersonRepository.create(name, email, password, object : IAPIListener<HeaderModel> {
 
             override fun onSuccess(model: HeaderModel) {
 

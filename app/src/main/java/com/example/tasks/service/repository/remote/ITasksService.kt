@@ -23,8 +23,8 @@ interface ITasksService {
     @FormUrlEncoded
     fun create(
         @Field("PriorityId") priorityId: Int,
-        @Field("description") description:String,
-        @Field("DuaDate") dueDate: String,
+        @Field("Description") description:String,
+        @Field("DueDate") dueDate: String,
         @Field("Complete") complete: Boolean
     ): Call<Boolean>
 

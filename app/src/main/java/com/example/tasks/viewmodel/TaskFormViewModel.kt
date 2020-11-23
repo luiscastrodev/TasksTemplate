@@ -4,23 +4,39 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.tasks.service.listener.IAPIListener
 import com.example.tasks.service.listener.ValidationListener
 import com.example.tasks.service.model.PriorityModel
 import com.example.tasks.service.model.TaskModel
 import com.example.tasks.service.repository.PriorityRepository
+import com.example.tasks.service.repository.TaskRepository
 
 class TaskFormViewModel(application: Application) : AndroidViewModel(application) {
 
     private val mPriorityRepository = PriorityRepository(application)
+    private val mTaskRepository = TaskRepository(application)
 
     private val mPriorityList = MutableLiveData<List<PriorityModel>>()
     var priorities: LiveData<List<PriorityModel>> = mPriorityList
 
-    fun listPriorities(){
+    private val mValidation = MutableLiveData<ValidationListener>()
+    var validation: LiveData<ValidationListener> = mValidation
+
+    fun listPriorities() {
         mPriorityList.value = mPriorityRepository.list()
     }
 
-    fun save(task:TaskModel){
+    fun save(task: TaskModel) {
+        mTaskRepository.create(task, object : IAPIListener<Boolean> {
+            override fun onFalure(message: String) {
+                mValidation.value = ValidationListener(message)
+            }
+
+            override fun onSuccess(model: Boolean) {
+                mValidation.value = ValidationListener()
+            }
+
+        })
     }
 
 }

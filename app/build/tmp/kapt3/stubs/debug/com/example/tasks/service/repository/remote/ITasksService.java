@@ -27,9 +27,9 @@ public abstract interface ITasksService {
     @retrofit2.http.POST(value = "Task")
     public abstract retrofit2.Call<java.lang.Boolean> create(@retrofit2.http.Field(value = "PriorityId")
     int priorityId, @org.jetbrains.annotations.NotNull()
-    @retrofit2.http.Field(value = "description")
+    @retrofit2.http.Field(value = "Description")
     java.lang.String description, @org.jetbrains.annotations.NotNull()
-    @retrofit2.http.Field(value = "DuaDate")
+    @retrofit2.http.Field(value = "DueDate")
     java.lang.String dueDate, @retrofit2.http.Field(value = "Complete")
     boolean complete);
     
