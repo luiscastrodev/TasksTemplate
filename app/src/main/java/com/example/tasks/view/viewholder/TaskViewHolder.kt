@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tasks.R
 import com.example.tasks.service.listener.TaskListener
+import com.example.tasks.service.model.TaskModel
 
 class TaskViewHolder(itemView: View, val listener: TaskListener) :
     RecyclerView.ViewHolder(itemView) {
@@ -19,22 +20,22 @@ class TaskViewHolder(itemView: View, val listener: TaskListener) :
     /**
      * Atribui valores aos elementos de interface e também eventos
      */
-    fun bindData() {
+    fun bindData(task: TaskModel) {
 
         this.mTextDescription.text = ""
         this.mTextPriority.text = ""
         this.mTextDueDate.text = ""
 
         // Eventos
-        // mTextDescription.setOnClickListener { listener.onListClick(task.id) }
-        // mImageTask.setOnClickListener { }
+        mTextDescription.setOnClickListener { listener.onListClick(task.id) }
+        mImageTask.setOnClickListener { }
 
         mTextDescription.setOnLongClickListener {
             AlertDialog.Builder(itemView.context)
                 .setTitle(R.string.remocao_de_tarefa)
                 .setMessage(R.string.remover_tarefa)
                 .setPositiveButton(R.string.sim) { dialog, which ->
-                    // listener.onDeleteClick(task.id)
+                    listener.onDeleteClick(task.id)
                 }
                 .setNeutralButton(R.string.cancelar, null)
                 .show()
