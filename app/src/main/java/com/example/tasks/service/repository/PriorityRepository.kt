@@ -15,13 +15,16 @@ class PriorityRepository(context: Context) {
     private val mRemote = RetrofitClient.createService(IPriorityService::class.java)
     private val mPriorityDataBase = TaskDatabase.getDatabase(context).priorityDAO()
 
-    fun all(){
+    fun all() {
         val call: Call<List<PriorityModel>> = mRemote.list()
 
         call.enqueue(object : Callback<List<PriorityModel>> {
-            override fun onResponse( call: Call<List<PriorityModel>>, response: Response<List<PriorityModel>>) {
+            override fun onResponse(
+                call: Call<List<PriorityModel>>,
+                response: Response<List<PriorityModel>>
+            ) {
 
-                if(response.code() == TaskConstants.HTTP.SUCCESS){
+                if (response.code() == TaskConstants.HTTP.SUCCESS) {
                     mPriorityDataBase.clear()
                     response.body()?.let { mPriorityDataBase.save(it) }
                 }
@@ -33,4 +36,8 @@ class PriorityRepository(context: Context) {
 
         })
     }
+
+    fun list() =
+        mPriorityDataBase.list()
+
 }
