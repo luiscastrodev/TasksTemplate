@@ -11,4 +11,12 @@ interface IPersonService {
     @POST("Authentication/Login")
     @FormUrlEncoded
     fun login(@Field("email") email: String, @Field("password") password: String): Call<HeaderModel>
+
+    @POST("Authentication/Create")
+    @FormUrlEncoded
+    fun create(
+        @Field("email") email: String,
+        @Field("password") password: String,
+        @Field("name") name: String
+    ): Call<HeaderModel>
 }
