@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.tasks.R
+import com.example.tasks.service.constants.TaskConstants
 import com.example.tasks.service.model.PriorityModel
 import com.example.tasks.service.model.TaskModel
 import com.example.tasks.viewmodel.RegisterViewModel
@@ -25,7 +26,8 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
 
     private lateinit var mViewModel: TaskFormViewModel
     private val mDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
-    private val mListPriority : MutableList<Int> = arrayListOf()
+    private val mListPriority: MutableList<Int> = arrayListOf()
+    private var mTaskId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,17 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
 
         mViewModel.listPriorities()
 
+        loadDataFromActivity()
+
+    }
+
+    fun loadDataFromActivity() {
+        val bunde = intent.extras
+
+        if (bunde != null) {
+            mTaskId = bunde.getInt(TaskConstants.BUNDLE.TASKID)
+            mViewModel.load(mTaskId)
+        }
     }
 
     override fun onClick(v: View) {
@@ -50,8 +63,9 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
         }
     }
 
-    private fun handleSave(){
+    private fun handleSave() {
         val task = TaskModel().apply {
+            this.id = mTaskId
             this.description = edit_description.text.toString()
             this.priorityId = mListPriority[spinner_priority.selectedItemPosition]
             this.dueData = button_date.text.toString()
@@ -71,23 +85,44 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun observe() {
-        mViewModel.priorities.observe(this, Observer{
-            val list : MutableList<String> = arrayListOf()
-            for (item in it){
+        mViewModel.priorities.observe(this, Observer {
+            val list: MutableList<String> = arrayListOf()
+            for (item in it) {
                 list.add(item.description)
                 mListPriority.add(item.id)
             }
-            val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,list)
+            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, list)
             spinner_priority.adapter = adapter
         })
 
         mViewModel.validation.observe(this, Observer {
             if (it.sucess()) {
                 Toast.makeText(this, "Sucesso!", Toast.LENGTH_SHORT).show()
-            }else{
+            } else {
                 Toast.makeText(this, it.failure(), Toast.LENGTH_SHORT).show()
             }
         })
+
+        mViewModel.task.observe(this, Observer {
+            edit_description.setText(it.description)
+            check_complete.isChecked = it.complete
+
+            //val date = SimpleDateFormat("yyyy-MM-dd").parse(it.dueData)
+            button_date.text = ""// mDateFormat.format(date)
+
+            spinner_priority.setSelection(getindex(it.priorityId))
+        })
+    }
+
+    private fun getindex(id: Int): Int {
+        var idex = 0
+        for(i in 0 until mListPriority.count()){
+            if(mListPriority[i] == id){
+                idex = i
+            }
+        }
+
+        return idex
     }
 
     private fun listeners() {

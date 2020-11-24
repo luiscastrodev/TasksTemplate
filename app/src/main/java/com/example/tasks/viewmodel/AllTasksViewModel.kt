@@ -27,4 +27,30 @@ class AllTasksViewModel(application: Application) : AndroidViewModel(application
             }
         })
     }
+
+    fun complete(id:Int){
+        mTaskRepository.updateStatus(id, true, object : IAPIListener<Boolean> {
+            override fun onFalure(message: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onSuccess(model: Boolean) {
+                list()
+            }
+
+        })
+    }
+
+    fun undo(id:Int){
+        mTaskRepository.updateStatus(id, false, object : IAPIListener<Boolean> {
+            override fun onFalure(message: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onSuccess(model: Boolean) {
+                list()
+            }
+
+        })
+    }
 }

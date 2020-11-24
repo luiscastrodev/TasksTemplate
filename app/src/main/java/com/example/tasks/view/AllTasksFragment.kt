@@ -44,11 +44,12 @@ class AllTasksFragment : Fragment() {
 
             override fun onDeleteClick(id: Int) {
             }
-
             override fun onCompleteClick(id: Int) {
+                mViewModel.complete(id)
             }
 
             override fun onUndoClick(id: Int) {
+                mViewModel.undo(id)
             }
         }
 

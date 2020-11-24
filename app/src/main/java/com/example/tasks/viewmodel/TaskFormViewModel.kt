@@ -22,20 +22,50 @@ class TaskFormViewModel(application: Application) : AndroidViewModel(application
     private val mValidation = MutableLiveData<ValidationListener>()
     var validation: LiveData<ValidationListener> = mValidation
 
+    private val mTask = MutableLiveData<TaskModel>()
+    var task: LiveData<TaskModel> = mTask
+
     fun listPriorities() {
         mPriorityList.value = mPriorityRepository.list()
     }
 
     fun save(task: TaskModel) {
-        mTaskRepository.create(task, object : IAPIListener<Boolean> {
-            override fun onFalure(message: String) {
-                mValidation.value = ValidationListener(message)
-            }
 
-            override fun onSuccess(model: Boolean) {
+        if(task.id > 0){
+            mTaskRepository.create(task, object : IAPIListener<Boolean> {
+                override fun onFalure(message: String) {
+                    mValidation.value = ValidationListener(message)
+                }
+
+                override fun onSuccess(model: Boolean) {
+                    mValidation.value = ValidationListener()
+                }
+
+            })
+        }else{
+            mTaskRepository.update(task, object : IAPIListener<Boolean> {
+                override fun onFalure(message: String) {
+                    mValidation.value = ValidationListener(message)
+                }
+
+                override fun onSuccess(model: Boolean) {
+                    mValidation.value = ValidationListener()
+                }
+
+            })
+        }
+
+    }
+
+    fun load(id: Int) {
+        mTaskRepository.load(id, object : IAPIListener<TaskModel> {
+            override fun onFalure(message: String) {
                 mValidation.value = ValidationListener()
             }
 
+            override fun onSuccess(model: TaskModel) {
+                mTask.value = model
+            }
         })
     }
 
