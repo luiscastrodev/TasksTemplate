@@ -28,6 +28,19 @@ class AllTasksViewModel(application: Application) : AndroidViewModel(application
         })
     }
 
+    fun delete(id:Int){
+        mTaskRepository.delete(id,  object : IAPIListener<Boolean> {
+            override fun onFalure(message: String) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onSuccess(model: Boolean) {
+                list()
+            }
+
+        })
+    }
+
     fun complete(id:Int){
         mTaskRepository.updateStatus(id, true, object : IAPIListener<Boolean> {
             override fun onFalure(message: String) {
