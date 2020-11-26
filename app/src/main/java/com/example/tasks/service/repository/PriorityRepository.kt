@@ -15,6 +15,7 @@ class PriorityRepository(context: Context) {
     private val mRemote = RetrofitClient.createService(IPriorityService::class.java)
     private val mPriorityDataBase = TaskDatabase.getDatabase(context).priorityDAO()
 
+    //region ALL
     fun all() {
         val call: Call<List<PriorityModel>> = mRemote.list()
 
@@ -36,7 +37,7 @@ class PriorityRepository(context: Context) {
 
         })
     }
-
+    //endregion
     fun list() =
         mPriorityDataBase.list()
 

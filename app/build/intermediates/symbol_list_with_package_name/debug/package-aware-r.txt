@@ -2139,8 +2139,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_all_tasks
-layout fragment_expired_tasks
-layout fragment_next_tasks
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

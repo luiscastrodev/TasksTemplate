@@ -44,10 +44,6 @@
         "source": "D:\\src\\Projetos\\TasksTemplate\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "D:\\src\\Projetos\\TasksTemplate\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_expired_tasks.xml.flat",
-        "source": "D:\\src\\Projetos\\TasksTemplate\\app\\src\\main\\res\\layout\\fragment_expired_tasks.xml"
-    },
-    {
         "merged": "D:\\src\\Projetos\\TasksTemplate\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\src\\Projetos\\TasksTemplate\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -110,10 +106,6 @@
     {
         "merged": "D:\\src\\Projetos\\TasksTemplate\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\src\\Projetos\\TasksTemplate\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\src\\Projetos\\TasksTemplate\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_next_tasks.xml.flat",
-        "source": "D:\\src\\Projetos\\TasksTemplate\\app\\src\\main\\res\\layout\\fragment_next_tasks.xml"
     },
     {
         "merged": "D:\\src\\Projetos\\TasksTemplate\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main.xml.flat",
