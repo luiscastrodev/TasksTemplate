@@ -32,10 +32,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         observe()
 
         // Verifica se usuário está logado
-        verifyLoggedUser()
+        //verifyLoggedUser()
 
-        if (FingerPrintHelper.isAuthenticationAvailable(this))
-            showAutentication()
+        mViewModel.isAuthenticationAvailable()
 
     }
 
@@ -49,16 +48,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             executor,
             object : BiometricPrompt.AuthenticationCallback() {
 
-                override fun onAuthenticationFailed() {
+               /* override fun onAuthenticationFailed() {
                     super.onAuthenticationFailed()
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     super.onAuthenticationError(errorCode, errString)
-                }
+                }*/
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
+
+                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    finish()
                 }
 
 
@@ -112,10 +114,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
-        mViewModel.loggedUser.observe(this, Observer {
+       /* mViewModel.loggedUser.observe(this, Observer {
             if (it) {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
+            }
+        })*/
+
+        mViewModel.figerprint.observe(this, Observer {
+            if (it) {
+                showAutentication()
             }
         })
     }
