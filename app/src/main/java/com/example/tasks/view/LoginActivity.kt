@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.example.tasks.R
 import com.example.tasks.service.constants.TaskConstants
+import com.example.tasks.service.helper.FingerPrintHelper
 import com.example.tasks.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_login.*
+import java.util.concurrent.Executor
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -29,6 +33,46 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         // Verifica se usuário está logado
         verifyLoggedUser()
+
+        if (FingerPrintHelper.isAuthenticationAvailable(this))
+            showAutentication()
+
+    }
+
+    private fun showAutentication() {
+        //Executor
+        val executor: Executor = ContextCompat.getMainExecutor(this)
+
+        //BiometricPrompt
+        val biometricPrompt: BiometricPrompt = BiometricPrompt(
+            this@LoginActivity,
+            executor,
+            object : BiometricPrompt.AuthenticationCallback() {
+
+                override fun onAuthenticationFailed() {
+                    super.onAuthenticationFailed()
+                }
+
+                override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                    super.onAuthenticationError(errorCode, errString)
+                }
+
+                override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                    super.onAuthenticationSucceeded(result)
+                }
+
+
+            })
+
+        //Bioometric INFO
+        val info: BiometricPrompt.PromptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Titulo")
+            .setSubtitle("subtitulo")
+            .setDescription("Descricao")
+            .setNegativeButtonText("Cancelar")
+            .build()
+
+        biometricPrompt.authenticate(info)
     }
 
     override fun onClick(v: View) {
@@ -69,7 +113,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         })
 
         mViewModel.loggedUser.observe(this, Observer {
-            if(it){
+            if (it) {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
