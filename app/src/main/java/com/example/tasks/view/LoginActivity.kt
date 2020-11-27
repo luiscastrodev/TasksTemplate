@@ -68,9 +68,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         //Bioometric INFO
         val info: BiometricPrompt.PromptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Titulo")
-            .setSubtitle("subtitulo")
-            .setDescription("Descricao")
+            .setTitle("Autenticação por Biomêtria")
+           // .setSubtitle("Acessar app")
+            .setDescription("Pressione com a digital cadastrada")
             .setNegativeButtonText("Cancelar")
             .build()
 
